@@ -1,25 +1,26 @@
+loadstring(game:HttpGet('https://gist.githubusercontent.com/DevsHubCreator/022c7ec486e8ed52d31a8984d0869484/raw/c6bebe84595a69fca5c99e1a32bdf721b82e3bde/imgui', true))()
+local w = library:AddWindow('CHECK MAIN IMPORTANT!!!!')
+local tab = w:AddTab('Main')
 
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
+local CoreGui = game:GetService("StarterGui") -- Variable of StarterGui
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+tab:AddLabel('NEW VIDEO OUT FOR THE')
 
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.Position = UDim2.new(0.312072903, 0, 0.240522876, 0)
-Frame.Size = UDim2.new(0, 459, 0, 296)
-Frame.Active = true
-Frame.Draggable = true
+tab:AddLabel('NEWEST VERISON OF THIS GUI')
 
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.Position = UDim2.new(0.0784313753, 0, 0.0641891956, 0)
-TextLabel.Size = UDim2.new(0, 386, 0, 257)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "NEW VIDEO OUT FOR THE NEWEST VERISON OF THIS GUI GO TO LEGEND HANDLES ON YOUTUBE!"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
+tab:AddLabel('GO TO LEGEND HANDLES ON')
+
+tab:AddLabel('YOUTUBE!')
+
+
+tab:AddButton('Copy Youtube Channel', function(a)
+CoreGui:SetCore("SendNotification", {
+    -- Customizable
+    Title = "Youtube Channel",
+    Text = "Copied To Clipboard",
+    Duration = 6, -- Set the duration to how much you want this to stay
+    -- More code in part 2
+})
+    setclipboard("https://www.youtube.com/channel/UC_h2qb61tvGfoj9wfw22cww?sub_confirmation=1 ")
+toclipboard("https://www.youtube.com/channel/UC_h2qb61tvGfoj9wfw22cww?sub_confirmation=1 ")
+end)
