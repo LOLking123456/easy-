@@ -1,26 +1,22 @@
-loadstring(game:HttpGet('https://gist.githubusercontent.com/DevsHubCreator/022c7ec486e8ed52d31a8984d0869484/raw/c6bebe84595a69fca5c99e1a32bdf721b82e3bde/imgui', true))()
-local w = library:AddWindow('CHECK MAIN IMPORTANT!!!!')
-local tab = w:AddTab('Main')
 
+        local Library =
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("NEW VIDEO OUT FOR UPDATED HOOPZ GUI", "Serpent")
+
+        -- MAIN
+        local Main = Window:NewTab("Main")
+        local MainSection = Main:NewSection("Main")
+
+MainSection:NewButton("GET VIDEO LINK", "PASTE LINK TO GOOGLE", function()
 local CoreGui = game:GetService("StarterGui") -- Variable of StarterGui
-
-tab:AddLabel('NEW VIDEO OUT FOR THE')
-
-tab:AddLabel('NEWEST VERISON OF THIS GUI')
-
-tab:AddLabel('GO TO LEGEND HANDLES ON')
-
-tab:AddLabel('YOUTUBE!')
-
-
-tab:AddButton('Copy Youtube Channel', function(a)
-CoreGui:SetCore("SendNotification", {
-    -- Customizable
-    Title = "Youtube Channel",
-    Text = "Copied To Clipboard",
-    Duration = 6, -- Set the duration to how much you want this to stay
-    -- More code in part 2
-})
-    setclipboard("https://www.youtube.com/channel/UC_h2qb61tvGfoj9wfw22cww?sub_confirmation=1 ")
-toclipboard("https://www.youtube.com/channel/UC_h2qb61tvGfoj9wfw22cww?sub_confirmation=1 ")
-end)
+	CoreGui:SetCore("SendNotification", {
+		-- Customizable
+		Title = "Paste To Google",
+		Text = "Copied To Clipboard",
+		Duration = 7, -- Set the duration to how much you want this to stay
+		-- More code in part 2
+	})
+    setclipboard("https://www.youtube.com/watch?v=_x2DzcAQfWc&t=96s")
+	toclipboard("https://www.youtube.com/watch?v=_x2DzcAQfWc&t=96ss")
+            end)
+        
